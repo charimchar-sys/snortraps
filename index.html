@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>snortraps — Developer & Artist</title>
-    <meta name="description" content="snortraps — independent developer, graphics artist, and creator specializing in game development, modular systems, anti-cheat, programming, UI, graphics, and music.">
+    <meta name="description" content="snortraps — independent developer, graphics artist, moderator, and creator specializing in game development, modular systems, anti-cheat, programming, UI, graphics, moderation, and music.">
     <meta name="theme-color" content="#080808">
 
     <style>
@@ -128,7 +128,7 @@
         }
 
         .hero-description {
-            max-width: 700px;
+            max-width: 750px;
             color: #999;
             font-size: 18px;
             margin-bottom: 38px;
@@ -193,7 +193,7 @@
         }
 
         .section-description {
-            max-width: 450px;
+            max-width: 500px;
             color: #777;
             font-size: 15px;
         }
@@ -273,6 +273,70 @@
 
         .experience-card li {
             margin-bottom: 8px;
+        }
+
+        /* ---------- MODERATION ---------- */
+
+        .moderation {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .moderation-card {
+            border: 1px solid #1c1c1c;
+            border-radius: 10px;
+            padding: 35px;
+            background: #0b0b0b;
+        }
+
+        .moderation-card h3 {
+            font-size: 24px;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+
+        .moderation-card .role {
+            color: #555;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 18px;
+        }
+
+        .moderation-card p {
+            color: #777;
+            font-size: 15px;
+        }
+
+        .moderation-card ul {
+            margin-top: 20px;
+            padding-left: 18px;
+            color: #888;
+        }
+
+        .moderation-card li {
+            margin-bottom: 8px;
+        }
+
+        .moderation-summary {
+            grid-column: 1 / -1;
+            border: 1px solid #1c1c1c;
+            border-radius: 10px;
+            padding: 40px;
+            background: linear-gradient(145deg, #101010, #090909);
+        }
+
+        .moderation-summary h3 {
+            font-size: 30px;
+            letter-spacing: -1px;
+            margin-bottom: 14px;
+        }
+
+        .moderation-summary p {
+            color: #777;
+            max-width: 800px;
+            font-size: 16px;
         }
 
         /* ---------- PROJECTS ---------- */
@@ -488,9 +552,14 @@
 
             .about-grid,
             .experience,
+            .moderation,
             .projects,
             .skills {
                 grid-template-columns: 1fr;
+            }
+
+            .moderation-summary {
+                grid-column: auto;
             }
 
             .facts {
@@ -550,6 +619,7 @@
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#moderation">Moderation</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#music">Music</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -566,7 +636,7 @@
         <div class="hero-content">
 
             <div class="eyebrow">
-                Developer · Graphics Artist · Creator
+                Developer · Graphics Artist · Moderator · Creator
             </div>
 
             <h1>
@@ -574,11 +644,11 @@
             </h1>
 
             <p class="hero-description">
-                Independent developer and graphics artist with 3 years
-                of programming experience and 6 years of graphics
-                experience, specializing in practical game development,
-                modular architecture, anti-cheat systems, UI, visual
-                design, and creative technology.
+                Independent developer, graphics artist, and community
+                staff member with 3+ years of programming experience,
+                6 years of graphics experience, and 6 years of staffing
+                and moderation experience across games and Discord
+                communities.
             </p>
 
             <div class="buttons">
@@ -610,8 +680,9 @@
             </div>
 
             <p class="section-description">
-                A developer and graphics artist combining programming,
-                game development, visual design, and creative technology.
+                A developer, graphics artist, moderator, and creator
+                combining programming, game development, visual design,
+                community management, and creative technology.
             </p>
 
         </div>
@@ -622,10 +693,10 @@
 
                 <p>
                     I'm <strong>snortraps</strong>, an independent
-                    developer, graphics artist, and creator with
-                    approximately three years of experience in computer
-                    programming and six years of experience creating
-                    digital graphics.
+                    developer, graphics artist, moderator, and creator
+                    with over three years of computer programming
+                    experience and approximately six years of graphics
+                    experience.
                 </p>
 
                 <p>
@@ -654,8 +725,18 @@
                 <p>
                     Alongside programming, I've spent around
                     <strong>6 years working with graphics</strong>,
-                    creating visual assets, UI elements, icons,
-                    interfaces, and other digital artwork for projects.
+                    creating visual assets, UI elements, menu icons,
+                    interfaces, and other digital artwork for games
+                    and online projects.
+                </p>
+
+                <p>
+                    I've also spent approximately
+                    <strong>6 years staffing and moderating games and
+                    Discord communities</strong>, giving me experience
+                    with community management, rule enforcement,
+                    support, conflict resolution, and handling
+                    moderation situations.
                 </p>
 
             </div>
@@ -673,6 +754,11 @@
                 </div>
 
                 <div class="fact">
+                    <h3>6 Years</h3>
+                    <p>Staffing & moderation experience</p>
+                </div>
+
+                <div class="fact">
                     <h3>Luau</h3>
                     <p>Primary development language</p>
                 </div>
@@ -682,6 +768,11 @@
                     <p>Practical multiplayer development</p>
                 </div>
 
+                <div class="fact">
+                    <h3>Community</h3>
+                    <p>Game & Discord moderation</p>
+                </div>
+
             </div>
 
         </div>
@@ -689,14 +780,14 @@
     </section>
 
 
-    <!-- EXPERIENCE -->
+    <!-- DEVELOPMENT EXPERIENCE -->
 
     <section id="experience">
 
         <div class="section-header">
 
             <div>
-                <div class="section-number">02 / EXPERIENCE</div>
+                <div class="section-number">02 / DEVELOPMENT</div>
                 <h2 class="section-title">How I develop.</h2>
             </div>
 
@@ -834,10 +925,10 @@
                 <h3>FAULTLINE — Graphics</h3>
 
                 <p>
-                    Alongside development on FAULTLINE, I worked on the
-                    game's visual assets and interface graphics, helping
-                    establish the visual language of the game's menus
-                    and systems.
+                    Alongside development on FAULTLINE, I worked on
+                    the game's visual assets and interface graphics,
+                    contributing graphics used throughout the game's
+                    menus and systems.
                 </p>
 
                 <ul>
@@ -855,6 +946,162 @@
     </section>
 
 
+    <!-- MODERATION EXPERIENCE -->
+
+    <section id="moderation">
+
+        <div class="section-header">
+
+            <div>
+                <div class="section-number">03 / MODERATION</div>
+                <h2 class="section-title">Community experience.</h2>
+            </div>
+
+            <p class="section-description">
+                Six years of experience staffing and moderating
+                Roblox games and Discord communities.
+            </p>
+
+        </div>
+
+
+        <div class="moderation">
+
+            <!-- SUMMARY -->
+
+            <div class="moderation-summary">
+
+                <h3>6+ Years of Staffing & Moderation</h3>
+
+                <p>
+                    I've been involved in staffing and moderating
+                    games and Discord communities for approximately
+                    six years. My experience includes enforcing
+                    community rules, handling reports and tickets,
+                    resolving conflicts, assisting players, reviewing
+                    situations, and helping maintain organized and
+                    welcoming communities.
+                </p>
+
+            </div>
+
+
+            <!-- CONVERGENCE -->
+
+            <div class="moderation-card">
+
+                <h3>Convergence</h3>
+
+                <div class="role">
+                    Former Moderator · 1 Year
+                </div>
+
+                <p>
+                    Served as a moderator for Convergence on Roblox,
+                    gaining experience handling community moderation,
+                    player reports, rule enforcement, and day-to-day
+                    staff responsibilities.
+                </p>
+
+                <ul>
+                    <li>Player moderation</li>
+                    <li>Rule enforcement</li>
+                    <li>Reports & investigations</li>
+                    <li>Community assistance</li>
+                    <li>Staff coordination</li>
+                </ul>
+
+            </div>
+
+
+            <!-- VIOLENCE DISTRICT -->
+
+            <div class="moderation-card">
+
+                <h3>Violence District</h3>
+
+                <div class="role">
+                    Former Moderator · 1 Year
+                </div>
+
+                <p>
+                    Former moderator for Violence District on Roblox,
+                    with experience handling player behavior,
+                    moderation situations, community reports, and
+                    enforcing established server and game rules.
+                </p>
+
+                <ul>
+                    <li>Player reports</li>
+                    <li>Rule enforcement</li>
+                    <li>Moderation decisions</li>
+                    <li>Community support</li>
+                    <li>Staff communication</li>
+                </ul>
+
+            </div>
+
+
+            <!-- DA HOOD REMAKES -->
+
+            <div class="moderation-card">
+
+                <h3>Da Hood Remakes</h3>
+
+                <div class="role">
+                    Moderation & Staffing
+                </div>
+
+                <p>
+                    Experience staffing and moderating communities
+                    surrounding Da Hood remake projects, including
+                    player management, community enforcement, and
+                    maintaining organized environments.
+                </p>
+
+                <ul>
+                    <li>Community moderation</li>
+                    <li>Player management</li>
+                    <li>Rule enforcement</li>
+                    <li>Reports & support</li>
+                    <li>Staff responsibilities</li>
+                </ul>
+
+            </div>
+
+
+            <!-- GENERAL -->
+
+            <div class="moderation-card">
+
+                <h3>Community Management</h3>
+
+                <div class="role">
+                    6+ Years Experience
+                </div>
+
+                <p>
+                    Beyond individual games, I've spent years
+                    moderating and staffing Discord communities and
+                    online gaming communities.
+                </p>
+
+                <ul>
+                    <li>Discord moderation</li>
+                    <li>Ticket support</li>
+                    <li>Conflict resolution</li>
+                    <li>Appeal handling</li>
+                    <li>Staff communication</li>
+                    <li>Community management</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
     <!-- PROJECTS -->
 
     <section id="projects">
@@ -862,13 +1109,14 @@
         <div class="section-header">
 
             <div>
-                <div class="section-number">03 / PROJECTS</div>
+                <div class="section-number">04 / PROJECTS</div>
                 <h2 class="section-title">What I'm building.</h2>
             </div>
 
             <p class="section-description">
                 Projects where I've applied programming,
-                systems engineering, graphics, UI, and creative direction.
+                systems engineering, graphics, UI, moderation,
+                and creative direction.
             </p>
 
         </div>
@@ -897,8 +1145,9 @@
                         concepts, and server-authoritative gameplay.
 
                         I also contributed to the game's graphics,
-                        including menu icons, interface assets, and
-                        other visual elements used throughout the game.
+                        including menu icons, interface assets,
+                        UI graphics, and other visual elements used
+                        throughout the game.
                     </p>
 
                 </div>
@@ -951,7 +1200,7 @@
         <div class="section-header">
 
             <div>
-                <div class="section-number">04 / MUSIC</div>
+                <div class="section-number">05 / MUSIC</div>
                 <h2 class="section-title">Made with sound.</h2>
             </div>
 
@@ -1002,13 +1251,13 @@
         <div class="section-header">
 
             <div>
-                <div class="section-number">05 / SKILLS</div>
+                <div class="section-number">06 / SKILLS</div>
                 <h2 class="section-title">What I use.</h2>
             </div>
 
             <p class="section-description">
                 Programming languages, development technologies,
-                graphics, and creative tools I work with.
+                graphics, moderation, and creative tools.
             </p>
 
         </div>
@@ -1065,6 +1314,26 @@
                     <span class="skill">Menu Icons</span>
                     <span class="skill">Digital Art</span>
                     <span class="skill">Visual Direction</span>
+                </div>
+
+            </div>
+
+
+            <!-- MODERATION -->
+
+            <div class="skill-category">
+
+                <h3>Moderation & Community</h3>
+
+                <div class="skill-list">
+                    <span class="skill">6 Years Experience</span>
+                    <span class="skill">Game Moderation</span>
+                    <span class="skill">Discord Moderation</span>
+                    <span class="skill">Community Management</span>
+                    <span class="skill">Ticket Support</span>
+                    <span class="skill">Rule Enforcement</span>
+                    <span class="skill">Appeals</span>
+                    <span class="skill">Conflict Resolution</span>
                 </div>
 
             </div>
@@ -1135,7 +1404,7 @@
     <section id="contact" class="contact">
 
         <div class="section-number">
-            06 / CONTACT
+            07 / CONTACT
         </div>
 
         <h2>
@@ -1146,7 +1415,7 @@
         <p>
             Interested in collaborating, working together,
             discussing a project, commissioning graphics,
-            listening to my music, or just connecting?
+            staffing, listening to my music, or just connecting?
         </p>
 
         <div class="socials">
