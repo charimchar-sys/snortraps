@@ -1,1 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>snortraps — Artist & Developer</title>
+    <meta name="description" content="snortraps — independent artist, developer, and creator.">
+    <meta name="theme-color" content="#080808">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #080808;
+            color: #f5f5f5;
+            font-family: Inter, Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* ---------- NAVIGATION ---------- */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            background: rgba(8, 8, 8, 0.75);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #777;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #999;
+            font-size: 14px;
+            transition: 0.25s ease;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        /* ---------- HERO ---------- */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 7% 80px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            left: -250px;
+            top: 20%;
+            background: rgba(255,255,255,0.035);
+            filter: blur(120px);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .eyebrow {
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(60px, 12vw, 150px);
+            line-height: 0.85;
+            letter-spacing: -8px;
+            font-weight: 900;
+            margin-bottom: 35px;
+        }
+
+        .hero h1 span {
+            color: #555;
+        }
+
+        .hero-description {
+            max-width: 620px;
+            color: #999;
+            font-size: 18px;
+            margin-bottom: 38px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 13px 21px;
+            border: 1px solid #292929;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.25s ease;
+        }
+
+        .button.primary {
+            background: #f5f5f5;
+            color: #080808;
+            border-color: #f5f5f5;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            border-color: #555;
+        }
+
+        .button.primary:hover {
+            background: #ddd;
+        }
+
+        /* ---------- GENERAL ---------- */
+
+        section {
+            padding: 120px 7%;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 30px;
+            margin-bottom: 55px;
+        }
+
+        .section-number {
+            color: #555;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: clamp(35px, 5vw, 65px);
+            letter-spacing: -3px;
+            line-height: 1;
+        }
+
+        .section-description {
+            max-width: 420px;
+            color: #777;
+            font-size: 15px;
+        }
+
+        /* ---------- ABOUT ---------- */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+        }
+
+        .about-text {
+            color: #aaa;
+            font-size: 18px;
+            max-width: 650px;
+        }
+
+        .about-text p + p {
+            margin-top: 22px;
+        }
+
+        .facts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .fact {
+            border: 1px solid #1c1c1c;
+            padding: 25px;
+            border-radius: 8px;
+            background: #0b0b0b;
+        }
+
+        .fact h3 {
+            font-size: 14px;
+            margin-bottom: 7px;
+        }
+
+        .fact p {
+            color: #666;
+            font-size: 13px;
+        }
+
+        /* ---------- PROJECTS ---------- */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .project {
+            min-height: 390px;
+            border: 1px solid #1c1c1c;
+            border-radius: 10px;
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: linear-gradient(145deg, #101010, #090909);
+            transition: 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project::after {
+            content: "";
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            right: -100px;
+            top: -100px;
+            background: rgba(255,255,255,0.025);
+            border-radius: 50%;
+            filter: blur(50px);
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            border-color: #333;
+        }
+
+        .project-top {
+            position: relative;
+            z-index: 2;
+        }
+
+        .project-tag {
+            display: inline-block;
+            color: #777;
+            border: 1px solid #282828;
+            padding: 5px 9px;
+            border-radius: 5px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+        }
+
+        .project h3 {
+            font-size: 38px;
+            letter-spacing: -2px;
+            margin-bottom: 12px;
+        }
+
+        .project p {
+            color: #777;
+            max-width: 500px;
+        }
+
+        .project-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #555;
+            font-size: 12px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ---------- MUSIC ---------- */
+
+        .music-card {
+            border: 1px solid #1c1c1c;
+            border-radius: 10px;
+            padding: 45px;
+            background: #0b0b0b;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .music-info h3 {
+            font-size: 50px;
+            letter-spacing: -3px;
+            margin-bottom: 10px;
+        }
+
+        .music-info p {
+            color: #777;
+            max-width: 550px;
+        }
+
+        .music-button {
+            white-space: nowrap;
+        }
+
+        /* ---------- SKILLS ---------- */
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .skill-category {
+            padding: 30px;
+            border: 1px solid #1c1c1c;
+            border-radius: 8px;
+            background: #0b0b0b;
+        }
+
+        .skill-category h3 {
+            margin-bottom: 22px;
+            font-size: 16px;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        .skill {
+            border: 1px solid #252525;
+            padding: 7px 10px;
+            border-radius: 5px;
+            color: #777;
+            font-size: 12px;
+        }
+
+        /* ---------- CONTACT ---------- */
+
+        .contact {
+            text-align: center;
+            padding-top: 160px;
+            padding-bottom: 160px;
+        }
+
+        .contact h2 {
+            font-size: clamp(50px, 9vw, 110px);
+            letter-spacing: -6px;
+            line-height: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .contact p {
+            color: #777;
+            max-width: 500px;
+            margin: 0 auto 35px;
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 25px 7%;
+            display: flex;
+            justify-content: space-between;
+            color: #444;
+            font-size: 12px;
+        }
+
+        /* ---------- MOBILE ---------- */
+
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 0 5%;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .hero h1 {
+                letter-spacing: -5px;
+            }
+
+            section {
+                padding: 85px 5%;
+            }
+
+            .section-header {
+                display: block;
+            }
+
+            .section-description {
+                margin-top: 20px;
+            }
+
+            .about-grid,
+            .projects,
+            .skills {
+                grid-template-columns: 1fr;
+            }
+
+            .facts {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .music-card {
+                display: block;
+                padding: 30px;
+            }
+
+            .music-button {
+                display: inline-block;
+                margin-top: 25px;
+            }
+
+            .contact h2 {
+                letter-spacing: -4px;
+            }
+
+            footer {
+                padding: 25px 5%;
+            }
+        }
+
+        @media (max-width: 450px) {
+
+            .facts {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 70px;
+            }
+
+            .project h3 {
+                font-size: 32px;
+            }
+
+            .music-info h3 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#" class="logo">snortraps<span>.</span></a>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO -->
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Artist · Developer · Creator
+            </div>
+
+            <h1>
+                snortraps<span>.</span>
+            </h1>
+
+            <p class="hero-description">
+                Independent artist and developer building games,
+                making music, designing experiences, and turning
+                ideas into things people can actually experience.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="button primary">
+                    View my work
+                </a>
+
+                <a href="#contact" class="button">
+                    Get in touch
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <div class="section-header">
+
+            <div>
+                <div class="section-number">01 / ABOUT</div>
+                <h2 class="section-title">Who I am.</h2>
+            </div>
+
+            <p class="section-description">
+                A creator working across music, game development,
+                design, programming, and digital media.
+            </p>
+
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <p>
+                    I'm <strong>snortraps</strong>, an independent artist,
+                    developer, and creator focused on building things
+                    that feel different.
+                </p>
+
+                <p>
+                    My work ranges from producing music and designing
+                    sounds to developing multiplayer Roblox experiences,
+                    building gameplay systems, and creating interfaces.
+                </p>
+
+                <p>
+                    I enjoy taking an idea from a rough concept and
+                    turning it into something people can actually
+                    interact with, listen to, or experience.
+                </p>
+
+            </div>
+
+            <div class="facts">
+
+                <div class="fact">
+                    <h3>Artist</h3>
+                    <p>Music & audio production</p>
+                </div>
+
+                <div class="fact">
+                    <h3>Developer</h3>
+                    <p>Roblox & Luau development</p>
+                </div>
+
+                <div class="fact">
+                    <h3>Designer</h3>
+                    <p>UI, UX & visual direction</p>
+                </div>
+
+                <div class="fact">
+                    <h3>Creator</h3>
+                    <p>Projects & digital media</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects">
+
+        <div class="section-header">
+
+            <div>
+                <div class="section-number">02 / PROJECTS</div>
+                <h2 class="section-title">What I'm building.</h2>
+            </div>
+
+            <p class="section-description">
+                Projects spanning games, interactive experiences,
+                music, and creative development.
+            </p>
+
+        </div>
+
+
+        <div class="projects">
+
+            <!-- FAULTLINE -->
+            <article class="project">
+
+                <div class="project-top">
+
+                    <span class="project-tag">
+                        Roblox · Tactical FPS
+                    </span>
+
+                    <h3>FAULTLINE</h3>
+
+                    <p>
+                        A fast-paced tactical FPS inspired by games
+                        like Rainbow Six Siege, focused on communication,
+                        strategy, competitive gameplay, and immersive
+                        systems.
+                    </p>
+
+                </div>
+
+                <div class="project-bottom">
+                    <span>In Development</span>
+                    <span>01</span>
+                </div>
+
+            </article>
+
+
+            <!-- BLACKOUT -->
+            <article class="project">
+
+                <div class="project-top">
+
+                    <span class="project-tag">
+                        Roblox · Survival
+                    </span>
+
+                    <h3>BLACKOUT</h3>
+
+                    <p>
+                        A social-deception survival experience set
+                        inside a facility during power outages, where
+                        players must complete objectives while hidden
+                        infiltrators work against them.
+                    </p>
+
+                </div>
+
+                <div class="project-bottom">
+                    <span>Prototype</span>
+                    <span>02</span>
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- MUSIC -->
+    <section id="music">
+
+        <div class="section-header">
+
+            <div>
+                <div class="section-number">03 / MUSIC</div>
+                <h2 class="section-title">Made with sound.</h2>
+            </div>
+
+            <p class="section-description">
+                Music, production, vocals, experimentation,
+                and sound design.
+            </p>
+
+        </div>
+
+
+        <div class="music-card">
+
+            <div class="music-info">
+
+                <span class="project-tag">
+                    Music Project
+                </span>
+
+                <h3>SHINIGAMI!</h3>
+
+                <p>
+                    An experimental music project from snortraps,
+                    exploring darker themes, atmospheric production,
+                    hip-hop, hoodtrap, jerk, and other sounds.
+                </p>
+
+            </div>
+
+            <!-- REPLACE THIS LINK -->
+            <a href="#" class="button primary music-button">
+                Listen to my music →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills">
+
+        <div class="section-header">
+
+            <div>
+                <div class="section-number">04 / SKILLS</div>
+                <h2 class="section-title">What I do.</h2>
+            </div>
+
+            <p class="section-description">
+                A mix of technical development and creative
+                production.
+            </p>
+
+        </div>
+
+
+        <div class="skills">
+
+            <div class="skill-category">
+
+                <h3>Development</h3>
+
+                <div class="skill-list">
+                    <span class="skill">Luau</span>
+                    <span class="skill">Roblox Studio</span>
+                    <span class="skill">Gameplay Systems</span>
+                    <span class="skill">UI Scripting</span>
+                    <span class="skill">RemoteEvents</span>
+                    <span class="skill">Server Architecture</span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-category">
+
+                <h3>Creative</h3>
+
+                <div class="skill-list">
+                    <span class="skill">Music Production</span>
+                    <span class="skill">Sound Design</span>
+                    <span class="skill">Audio Editing</span>
+                    <span class="skill">Game Design</span>
+                    <span class="skill">UI Design</span>
+                    <span class="skill">Visual Direction</span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-category">
+
+                <h3>Tools</h3>
+
+                <div class="skill-list">
+                    <span class="skill">Roblox Studio</span>
+                    <span class="skill">FL Studio</span>
+                    <span class="skill">BandLab</span>
+                    <span class="skill">Figma</span>
+                    <span class="skill">GitHub</span>
+                    <span class="skill">Discord</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+
+        <div class="section-number">
+            05 / CONTACT
+        </div>
+
+        <h2>
+            Let's build<br>
+            something.
+        </h2>
+
+        <p>
+            Interested in collaborating, working together,
+            discussing a project, or just connecting?
+        </p>
+
+        <div class="socials">
+
+            <!-- REPLACE THESE LINKS -->
+
+            <a href="#" class="button">
+                GitHub
+            </a>
+
+            <a href="#" class="button">
+                Roblox
+            </a>
+
+            <a href="#" class="button">
+                Discord
+            </a>
+
+            <a href="#" class="button">
+                YouTube
+            </a>
+
+            <a href="#" class="button">
+                Spotify
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <span>© 2026 snortraps</span>
+
+        <span>
+            Built from scratch.
+        </span>
+
+    </footer>
+
+
+</body>
+</html>
