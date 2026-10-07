@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>snortraps — Artist & Developer</title>
-    <meta name="description" content="snortraps — independent artist, developer, and creator.">
+    <title>snortraps — Developer & Artist</title>
+    <meta name="description" content="snortraps — independent developer, artist, and creator specializing in game development, modular systems, anti-cheat, programming, and music.">
     <meta name="theme-color" content="#080808">
 
     <style>
@@ -44,7 +44,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 0 7%;
-            background: rgba(8, 8, 8, 0.75);
+            background: rgba(8, 8, 8, 0.78);
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
             border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -101,7 +101,7 @@
         }
 
         .hero-content {
-            max-width: 900px;
+            max-width: 950px;
             position: relative;
             z-index: 2;
         }
@@ -128,7 +128,7 @@
         }
 
         .hero-description {
-            max-width: 620px;
+            max-width: 700px;
             color: #999;
             font-size: 18px;
             margin-bottom: 38px;
@@ -193,7 +193,7 @@
         }
 
         .section-description {
-            max-width: 420px;
+            max-width: 450px;
             color: #777;
             font-size: 15px;
         }
@@ -237,6 +237,42 @@
         .fact p {
             color: #666;
             font-size: 13px;
+        }
+
+        /* ---------- EXPERIENCE ---------- */
+
+        .experience {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .experience-card {
+            border: 1px solid #1c1c1c;
+            border-radius: 10px;
+            padding: 35px;
+            background: #0b0b0b;
+        }
+
+        .experience-card h3 {
+            font-size: 24px;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+        }
+
+        .experience-card p {
+            color: #777;
+            font-size: 15px;
+        }
+
+        .experience-card ul {
+            margin-top: 20px;
+            padding-left: 18px;
+            color: #888;
+        }
+
+        .experience-card li {
+            margin-bottom: 8px;
         }
 
         /* ---------- PROJECTS ---------- */
@@ -451,6 +487,7 @@
             }
 
             .about-grid,
+            .experience,
             .projects,
             .skills {
                 grid-template-columns: 1fr;
@@ -503,26 +540,33 @@
 <body>
 
     <!-- NAVIGATION -->
+
     <nav>
-        <a href="#" class="logo">snortraps<span>.</span></a>
+
+        <a href="#" class="logo">
+            snortraps<span>.</span>
+        </a>
 
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#music">Music</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+
     </nav>
 
 
     <!-- HERO -->
+
     <header class="hero">
 
         <div class="hero-content">
 
             <div class="eyebrow">
-                Artist · Developer · Creator
+                Developer · Artist · Creator
             </div>
 
             <h1>
@@ -530,12 +574,14 @@
             </h1>
 
             <p class="hero-description">
-                Independent artist and developer building games,
-                making music, designing experiences, and turning
-                ideas into things people can actually experience.
+                Independent developer and artist with 3 years of
+                computer programming experience, specializing in
+                practical game development, modular architecture,
+                anti-cheat systems, and creative technology.
             </p>
 
             <div class="buttons">
+
                 <a href="#projects" class="button primary">
                     View my work
                 </a>
@@ -543,6 +589,7 @@
                 <a href="#contact" class="button">
                     Get in touch
                 </a>
+
             </div>
 
         </div>
@@ -551,6 +598,7 @@
 
 
     <!-- ABOUT -->
+
     <section id="about">
 
         <div class="section-header">
@@ -561,8 +609,8 @@
             </div>
 
             <p class="section-description">
-                A creator working across music, game development,
-                design, programming, and digital media.
+                A developer focused on practical programming,
+                game systems, architecture, and creative technology.
             </p>
 
         </div>
@@ -572,21 +620,31 @@
             <div class="about-text">
 
                 <p>
-                    I'm <strong>snortraps</strong>, an independent artist,
-                    developer, and creator focused on building things
-                    that feel different.
+                    I'm <strong>snortraps</strong>, an independent
+                    developer, artist, and creator with approximately
+                    three years of experience in computer programming.
                 </p>
 
                 <p>
-                    My work ranges from producing music and designing
-                    sounds to developing multiplayer Roblox experiences,
-                    building gameplay systems, and creating interfaces.
+                    My strongest practical experience comes from
+                    developing multiplayer Roblox experiences and
+                    building systems that have to work together in
+                    real production environments.
                 </p>
 
                 <p>
-                    I enjoy taking an idea from a rough concept and
-                    turning it into something people can actually
-                    interact with, listen to, or experience.
+                    Rather than only learning programming through
+                    isolated exercises, I've spent significant time
+                    applying it to actual projects — debugging systems,
+                    designing architectures, handling client/server
+                    communication, developing gameplay mechanics,
+                    and improving systems as projects grow.
+                </p>
+
+                <p>
+                    I primarily work with <strong>Luau</strong>,
+                    while also programming with <strong>Python</strong>,
+                    <strong>CSS</strong>, and <strong>C++</strong>.
                 </p>
 
             </div>
@@ -594,23 +652,23 @@
             <div class="facts">
 
                 <div class="fact">
-                    <h3>Artist</h3>
-                    <p>Music & audio production</p>
+                    <h3>3+ Years</h3>
+                    <p>Computer programming experience</p>
                 </div>
 
                 <div class="fact">
-                    <h3>Developer</h3>
-                    <p>Roblox & Luau development</p>
+                    <h3>Luau</h3>
+                    <p>Primary development language</p>
                 </div>
 
                 <div class="fact">
-                    <h3>Designer</h3>
-                    <p>UI, UX & visual direction</p>
+                    <h3>Game Development</h3>
+                    <p>Practical multiplayer development</p>
                 </div>
 
                 <div class="fact">
-                    <h3>Creator</h3>
-                    <p>Projects & digital media</p>
+                    <h3>Systems</h3>
+                    <p>Modular and scalable architecture</p>
                 </div>
 
             </div>
@@ -620,19 +678,132 @@
     </section>
 
 
+    <!-- DEVELOPMENT EXPERIENCE -->
+
+    <section id="experience">
+
+        <div class="section-header">
+
+            <div>
+                <div class="section-number">02 / EXPERIENCE</div>
+                <h2 class="section-title">How I develop.</h2>
+            </div>
+
+            <p class="section-description">
+                Practical experience gained from building and
+                maintaining real multiplayer projects.
+            </p>
+
+        </div>
+
+
+        <div class="experience">
+
+            <div class="experience-card">
+
+                <h3>Modular Systems</h3>
+
+                <p>
+                    I design systems to be separated into reusable
+                    modules instead of putting entire features into
+                    large, difficult-to-maintain scripts.
+                </p>
+
+                <ul>
+                    <li>Reusable ModuleScripts</li>
+                    <li>Separated gameplay systems</li>
+                    <li>Configurable components</li>
+                    <li>Maintainable code structure</li>
+                    <li>Scalable feature architecture</li>
+                </ul>
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <h3>Anti-Cheat & Security</h3>
+
+                <p>
+                    I've worked with multiplayer security concepts
+                    and anti-cheat development, focusing on server-side
+                    validation and preventing clients from being trusted
+                    with actions they should not control.
+                </p>
+
+                <ul>
+                    <li>Server-side validation</li>
+                    <li>RemoteEvent security</li>
+                    <li>Suspicious behavior detection</li>
+                    <li>Client/server trust boundaries</li>
+                    <li>Exploit-resistant gameplay systems</li>
+                </ul>
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <h3>Multiplayer Architecture</h3>
+
+                <p>
+                    Building multiplayer games has given me practical
+                    experience working with client/server communication
+                    and designing systems that remain authoritative
+                    on the server.
+                </p>
+
+                <ul>
+                    <li>RemoteEvents</li>
+                    <li>RemoteFunctions</li>
+                    <li>Server-authoritative gameplay</li>
+                    <li>Player state management</li>
+                    <li>Round and match systems</li>
+                </ul>
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <h3>Gameplay Engineering</h3>
+
+                <p>
+                    I have built and maintained gameplay systems
+                    including weapons, loadouts, movement, rounds,
+                    queues, objectives, UI, and other interconnected
+                    game mechanics.
+                </p>
+
+                <ul>
+                    <li>Weapon systems</li>
+                    <li>Loadout systems</li>
+                    <li>Round management</li>
+                    <li>Queue systems</li>
+                    <li>Gameplay UI</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
     <!-- PROJECTS -->
+
     <section id="projects">
 
         <div class="section-header">
 
             <div>
-                <div class="section-number">02 / PROJECTS</div>
+                <div class="section-number">03 / PROJECTS</div>
                 <h2 class="section-title">What I'm building.</h2>
             </div>
 
             <p class="section-description">
-                Projects spanning games, interactive experiences,
-                music, and creative development.
+                Projects where I've applied programming,
+                systems design, game development, and creative direction.
             </p>
 
         </div>
@@ -641,6 +812,7 @@
         <div class="projects">
 
             <!-- FAULTLINE -->
+
             <article class="project">
 
                 <div class="project-top">
@@ -653,9 +825,11 @@
 
                     <p>
                         A fast-paced tactical FPS inspired by games
-                        like Rainbow Six Siege, focused on communication,
-                        strategy, competitive gameplay, and immersive
-                        systems.
+                        like Rainbow Six Siege. Development involves
+                        modular gameplay architecture, multiplayer
+                        systems, weapons, loadouts, queues, UI,
+                        anti-cheat concepts, and server-authoritative
+                        gameplay.
                     </p>
 
                 </div>
@@ -669,6 +843,7 @@
 
 
             <!-- BLACKOUT -->
+
             <article class="project">
 
                 <div class="project-top">
@@ -680,10 +855,11 @@
                     <h3>BLACKOUT</h3>
 
                     <p>
-                        A social-deception survival experience set
-                        inside a facility during power outages, where
-                        players must complete objectives while hidden
-                        infiltrators work against them.
+                        A social-deception survival experience
+                        centered around facility-wide power outages,
+                        objectives, hidden infiltrators, player roles,
+                        round management, and server-authoritative
+                        gameplay.
                     </p>
 
                 </div>
@@ -701,12 +877,13 @@
 
 
     <!-- MUSIC -->
+
     <section id="music">
 
         <div class="section-header">
 
             <div>
-                <div class="section-number">03 / MUSIC</div>
+                <div class="section-number">04 / MUSIC</div>
                 <h2 class="section-title">Made with sound.</h2>
             </div>
 
@@ -736,9 +913,14 @@
 
             </div>
 
-<a href="https://open.spotify.com/artist/4iWxq1JbrPjAhmK1pAb5kl" class="button primary music-button" target="_blank" rel="noopener noreferrer">
-    Listen to my music →
-</a>
+            <a
+                href="https://open.spotify.com/artist/4iWxq1JbrPjAhmK1pAb5kl"
+                class="button primary music-button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Listen to my music →
+            </a>
 
         </div>
 
@@ -746,18 +928,19 @@
 
 
     <!-- SKILLS -->
+
     <section id="skills">
 
         <div class="section-header">
 
             <div>
-                <div class="section-number">04 / SKILLS</div>
-                <h2 class="section-title">What I do.</h2>
+                <div class="section-number">05 / SKILLS</div>
+                <h2 class="section-title">What I use.</h2>
             </div>
 
             <p class="section-description">
-                A mix of technical development and creative
-                production.
+                Programming languages, development technologies,
+                and creative tools I work with.
             </p>
 
         </div>
@@ -767,15 +950,47 @@
 
             <div class="skill-category">
 
-                <h3>Development</h3>
+                <h3>Programming</h3>
 
                 <div class="skill-list">
                     <span class="skill">Luau</span>
+                    <span class="skill">Python</span>
+                    <span class="skill">C++</span>
+                    <span class="skill">CSS</span>
+                    <span class="skill">HTML</span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-category">
+
+                <h3>Game Development</h3>
+
+                <div class="skill-list">
                     <span class="skill">Roblox Studio</span>
+                    <span class="skill">Modular Systems</span>
+                    <span class="skill">Anti-Cheat</span>
+                    <span class="skill">Networking</span>
                     <span class="skill">Gameplay Systems</span>
-                    <span class="skill">UI Scripting</span>
-                    <span class="skill">RemoteEvents</span>
                     <span class="skill">Server Architecture</span>
+                    <span class="skill">UI Systems</span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-category">
+
+                <h3>Development Tools</h3>
+
+                <div class="skill-list">
+                    <span class="skill">GitHub</span>
+                    <span class="skill">Roblox Studio</span>
+                    <span class="skill">Figma</span>
+                    <span class="skill">Discord</span>
+                    <span class="skill">Debugging</span>
+                    <span class="skill">Version Control</span>
                 </div>
 
             </div>
@@ -799,15 +1014,31 @@
 
             <div class="skill-category">
 
-                <h3>Tools</h3>
+                <h3>Architecture</h3>
 
                 <div class="skill-list">
-                    <span class="skill">Roblox Studio</span>
+                    <span class="skill">Modular Architecture</span>
+                    <span class="skill">Client/Server</span>
+                    <span class="skill">RemoteEvents</span>
+                    <span class="skill">RemoteFunctions</span>
+                    <span class="skill">State Management</span>
+                    <span class="skill">System Design</span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-category">
+
+                <h3>Tools & Production</h3>
+
+                <div class="skill-list">
                     <span class="skill">FL Studio</span>
                     <span class="skill">BandLab</span>
                     <span class="skill">Figma</span>
                     <span class="skill">GitHub</span>
                     <span class="skill">Discord</span>
+                    <span class="skill">Roblox</span>
                 </div>
 
             </div>
@@ -818,10 +1049,11 @@
 
 
     <!-- CONTACT -->
+
     <section id="contact" class="contact">
 
         <div class="section-number">
-            05 / CONTACT
+            06 / CONTACT
         </div>
 
         <h2>
@@ -831,32 +1063,55 @@
 
         <p>
             Interested in collaborating, working together,
-            discussing a project, or just connecting?
+            discussing a project, listening to my music,
+            or just connecting?
         </p>
 
-<div class="socials">
+        <div class="socials">
 
-    <a href="https://github.com/charimchar-sys" class="button" target="_blank" rel="noopener noreferrer">
-        GitHub
-    </a>
+            <a
+                href="https://github.com/charimchar-sys"
+                class="button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
 
-    <a href="https://www.roblox.com/users/11158327118/profile" class="button" target="_blank" rel="noopener noreferrer">
-        Roblox
-    </a>
+            <a
+                href="https://www.roblox.com/users/11158327118/profile"
+                class="button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Roblox
+            </a>
 
-    <a href="https://discord.gg/flt" class="button" target="_blank" rel="noopener noreferrer">
-        Discord
-    </a>
+            <a
+                href="https://discord.gg/flt"
+                class="button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Discord
+            </a>
 
-    <a href="https://m.youtube.com/@snortraps?ra=m" class="button" target="_blank" rel="noopener noreferrer">
-        YouTube
-    </a>
+            <a
+                href="https://m.youtube.com/@snortraps?ra=m"
+                class="button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                YouTube
+            </a>
 
-    <a href="https://open.spotify.com/artist/4iWxq1JbrPjAhmK1pAb5kl" class="button" target="_blank" rel="noopener noreferrer">
-        Spotify
-    </a>
-
-</div>
+            <a
+                href="https://open.spotify.com/artist/4iWxq1JbrPjAhmK1pAb5kl"
+                class="button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Spotify
             </a>
 
         </div>
@@ -865,16 +1120,18 @@
 
 
     <!-- FOOTER -->
+
     <footer>
 
-        <span>© 2026 snortraps</span>
+        <span>
+            © 2026 snortraps
+        </span>
 
         <span>
             Built from scratch.
         </span>
 
     </footer>
-
 
 </body>
 </html>
